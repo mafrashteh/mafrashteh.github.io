@@ -118,3 +118,266 @@ h1,h2,h3,.btn,.header-cta,.site-nav a,.hero-tag,.eyebrow,.service-card a,.work-t
 }
 @media(max-width:390px){.hero h1{font-size:35px}.hero-points{display:grid;grid-template-columns:1fr 1fr}.top-banner a{display:none}.work-tab{padding-inline:13px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+/* Motion system — playful/Figma-like */
+:root{
+  --ease-spring:cubic-bezier(.2,.8,.2,1);
+  --ease-pop:cubic-bezier(.34,1.56,.64,1);
+  --ease-soft:cubic-bezier(.22,1,.36,1);
+  --shadow-purple:rgba(114,89,232,.2);
+}
+.motion-ready [data-reveal]{
+  opacity:0;
+  transform:translateY(26px) scale(.985);
+  filter:blur(4px);
+}
+.motion-ready [data-reveal].is-revealed{
+  opacity:1;
+  transform:none;
+  filter:none;
+  transition:
+    opacity .7s var(--ease-soft),
+    transform .75s var(--ease-soft),
+    filter .55s ease;
+}
+.motion-ready [data-reveal][data-delay="1"]{transition-delay:.08s}
+.motion-ready [data-reveal][data-delay="2"]{transition-delay:.16s}
+.motion-ready [data-reveal][data-delay="3"]{transition-delay:.24s}
+.motion-ready [data-reveal][data-delay="4"]{transition-delay:.32s}
+
+.btn,.header-cta{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  will-change:transform;
+  transition:
+    transform .28s var(--ease-pop),
+    box-shadow .28s var(--ease-pop),
+    background-color .2s ease,
+    color .2s ease;
+}
+.btn::before,.header-cta::before{
+  content:"";
+  position:absolute;
+  inset:-45%;
+  z-index:-1;
+  background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.45) 48%,transparent 61%);
+  transform:translateX(95%) rotate(8deg);
+  transition:transform .6s var(--ease-soft);
+}
+.btn:hover::before,.header-cta:hover::before{transform:translateX(-95%) rotate(8deg)}
+.btn:active,.header-cta:active{transform:translate(1px,1px) scale(.98)!important;box-shadow:1px 1px 0 var(--ink)!important}
+.btn-dark:hover{background:var(--purple);box-shadow:6px 6px 0 var(--ink)}
+.btn-light:hover{background:var(--yellow-100);box-shadow:6px 6px 0 var(--ink)}
+.header-cta:hover{background:var(--green-100);box-shadow:5px 5px 0 var(--ink)}
+
+.hero-tag{
+  position:relative;
+  padding:7px 12px;
+  border:1.5px solid var(--ink);
+  border-radius:999px;
+  background:#fff;
+  box-shadow:3px 3px 0 var(--ink);
+}
+.hero-tag i{animation:tagPulse 2s ease-in-out infinite}
+@keyframes tagPulse{
+  0%,100%{transform:scale(1);box-shadow:0 0 0 5px var(--purple-100)}
+  50%{transform:scale(1.18);box-shadow:0 0 0 9px rgba(114,89,232,.08)}
+}
+.hero h1 em::after{
+  transform-origin:right center;
+  animation:markerDraw 1.05s .22s var(--ease-soft) both;
+}
+@keyframes markerDraw{from{transform:scaleX(0) rotate(-2deg)}to{transform:scaleX(1) rotate(-2deg)}}
+.hero-copy{position:relative;z-index:2}
+.hero-illustration{transition:transform .22s ease-out;will-change:transform}
+.art-note{animation:floatNote 4.5s ease-in-out infinite;will-change:transform}
+.art-note--two{animation-delay:-2.1s}
+@keyframes floatNote{0%,100%{translate:0 0}50%{translate:0 -8px}}
+.about-card--float{animation:floatCard 5.2s ease-in-out infinite}
+.about-dot{animation:blobPulse 4.8s ease-in-out infinite}
+@keyframes floatCard{0%,100%{translate:0 0;rotate:0deg}50%{translate:0 -10px;rotate:-2deg}}
+@keyframes blobPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+.figma-selection{
+  position:absolute;
+  z-index:5;
+  width:72%;
+  height:57%;
+  left:13%;
+  top:17%;
+  border:1.5px solid #8b5cf6;
+  border-radius:4px;
+  pointer-events:none;
+  animation:selectionBreath 3.8s ease-in-out infinite;
+}
+.figma-selection__label{
+  position:absolute;
+  left:-1px;
+  top:-29px;
+  padding:4px 7px;
+  border-radius:5px 5px 5px 0;
+  background:#8b5cf6;
+  color:#fff;
+  font:700 10px/1 "Estedad","Yekan",sans-serif;
+  direction:ltr;
+}
+.figma-node{
+  position:absolute;
+  width:8px;
+  height:8px;
+  background:#fff;
+  border:1.5px solid #8b5cf6;
+}
+.figma-node--tl{left:-5px;top:-5px}.figma-node--tr{right:-5px;top:-5px}.figma-node--bl{left:-5px;bottom:-5px}.figma-node--br{right:-5px;bottom:-5px}
+@keyframes selectionBreath{0%,100%{opacity:.6}50%{opacity:1}}
+
+.figma-cursor{
+  position:absolute;
+  z-index:8;
+  left:2%;
+  top:12%;
+  display:flex;
+  align-items:flex-start;
+  gap:4px;
+  animation:cursorTour 9s var(--ease-soft) infinite;
+  pointer-events:none;
+}
+.figma-cursor svg{width:25px;height:32px;filter:drop-shadow(0 2px 1px rgba(0,0,0,.16))}
+.figma-cursor svg path{fill:#8b5cf6;stroke:#fff;stroke-width:2;stroke-linejoin:round}
+.figma-cursor span{
+  margin-top:24px;
+  padding:3px 7px;
+  border-radius:4px;
+  background:#8b5cf6;
+  color:#fff;
+  direction:ltr;
+  font:700 9px/1.2 "Estedad","Yekan",sans-serif;
+}
+@keyframes cursorTour{
+  0%,8%{transform:translate(0,0)}
+  24%{transform:translate(160px,50px)}
+  42%{transform:translate(285px,170px)}
+  62%{transform:translate(190px,285px)}
+  80%{transform:translate(58px,205px)}
+  100%{transform:translate(0,0)}
+}
+
+.service-card,.project-card,.why-grid article{
+  position:relative;
+  overflow:hidden;
+  transform-style:preserve-3d;
+  will-change:transform;
+}
+.service-card::after,.project-card::after,.why-grid article::after{
+  content:"";
+  position:absolute;
+  inset:-1px;
+  border-radius:inherit;
+  pointer-events:none;
+  background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.7),transparent 30%);
+  opacity:0;
+  transition:opacity .22s ease;
+  mix-blend-mode:soft-light;
+}
+.service-card:hover::after,.project-card:hover::after,.why-grid article:hover::after{opacity:1}
+.project-card:hover .project-arrow{background:var(--purple);color:#fff;transform:rotate(45deg)}
+.project-arrow{transition:transform .3s var(--ease-pop),background-color .2s ease,color .2s ease}
+.service-card:hover .service-illustration svg{transform:translateY(-5px) rotate(-1deg) scale(1.02)}
+.service-illustration svg{transition:transform .35s var(--ease-pop)}
+.why-grid article:hover .why-icon{transform:translateY(-4px) rotate(-5deg) scale(1.06)}
+.why-icon{transition:transform .3s var(--ease-pop)}
+
+.work-tab{
+  position:relative;
+  transition:transform .2s var(--ease-pop),background-color .2s ease,color .2s ease;
+}
+.work-tab:hover{transform:translateY(-2px)}
+.work-tab:active{transform:translateY(0) scale(.96)}
+.work-tab.is-active{box-shadow:2px 2px 0 var(--purple)}
+
+.process-item button i{
+  transition:transform .3s var(--ease-pop),background-color .2s ease;
+}
+.process-item button:hover i{transform:rotate(8deg) scale(1.08);background:var(--yellow-100)}
+.process-item.is-open button i{background:var(--green-100);transform:rotate(180deg)}
+.process-item.is-open button span{color:var(--purple)}
+.process-item button span{transition:color .2s ease}
+
+.faq-list details{
+  transition:background-color .2s ease,padding .2s ease;
+  border-radius:10px;
+}
+.faq-list details:hover{background:rgba(114,89,232,.04)}
+.faq-list details[open]{background:#fff;padding-inline:14px}
+
+.scroll-write{
+  display:inline;
+  background-image:linear-gradient(var(--yellow-100),var(--yellow-100));
+  background-size:0 38%;
+  background-repeat:no-repeat;
+  background-position:100% 92%;
+  transition:background-size .9s var(--ease-soft);
+}
+.scroll-write.is-written{background-size:100% 38%}
+
+.typewriter{
+  position:relative;
+  display:inline-block;
+}
+.typewriter::after{
+  content:"";
+  display:inline-block;
+  width:2px;
+  height:1em;
+  margin-right:4px;
+  background:currentColor;
+  vertical-align:-.08em;
+  animation:caretBlink .8s steps(1) infinite;
+}
+.typewriter.is-done::after{animation:caretFade .45s ease forwards}
+@keyframes caretBlink{50%{opacity:0}}
+@keyframes caretFade{to{opacity:0}}
+
+.scroll-progress{
+  position:fixed;
+  z-index:120;
+  top:0;
+  right:0;
+  height:3px;
+  width:var(--scroll-progress,0%);
+  background:linear-gradient(90deg,var(--pink),var(--purple),var(--green));
+  box-shadow:0 0 12px var(--shadow-purple);
+  pointer-events:none;
+}
+.cursor-orb{
+  position:fixed;
+  z-index:0;
+  width:280px;
+  height:280px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(114,89,232,.12),rgba(114,89,232,0) 68%);
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+  opacity:0;
+  transition:opacity .25s ease;
+  mix-blend-mode:multiply;
+}
+body.has-pointer .cursor-orb{opacity:1}
+
+@media(max-width:920px){
+  .figma-cursor{display:none}
+  .figma-selection{width:68%;height:58%;left:15%;top:18%}
+}
+@media(max-width:650px){
+  .figma-selection{width:72%;height:57%;left:13%;top:18%}
+  .figma-selection__label{font-size:8px;top:-24px}
+  .art-note{animation:none}
+  .service-card:hover,.project-card:hover,.why-grid article:hover{transform:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .motion-ready [data-reveal]{opacity:1!important;transform:none!important;filter:none!important}
+  .hero-tag i,.art-note,.about-card--float,.about-dot,.figma-selection,.figma-cursor,.typewriter::after{animation:none!important}
+  .cursor-orb{display:none!important}
+  .hero-illustration{transform:none!important}
+}
