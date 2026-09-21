@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mafrashteh.github.io/sitemap.xml

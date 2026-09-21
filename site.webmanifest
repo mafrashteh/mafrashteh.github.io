@@ -1,0 +1,17 @@
+{
+  "name": "مهدی افراشته",
+  "short_name": "مهدی افراشته",
+  "lang": "fa",
+  "dir": "rtl",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f7f5",
+  "theme_color": "#17181b",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
