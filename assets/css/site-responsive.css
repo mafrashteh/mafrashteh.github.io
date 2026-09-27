@@ -90,3 +90,67 @@
   .rewrite-slide.is-active,.rewrite-slide.is-editing .rewrite-before p,.rewrite-slide.is-edited .rewrite-after,.rewrite-cursor{animation:none!important}
   .rewrite-slide.is-edited .rewrite-after{opacity:1;transform:none}
 }
+
+
+/* SECTION LABELS + HERO LAB V3 */
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  width:max-content;
+  padding:7px 11px;
+  margin-bottom:10px;
+  border:1px solid rgba(115,87,232,.16);
+  border-radius:999px;
+  background:var(--purple-soft);
+  color:var(--purple);
+  font-size:12px;
+  font-weight:800;
+  line-height:1;
+}
+.section-heading .eyebrow,
+.editing-copy .eyebrow,
+.about-copy .eyebrow,
+.contact-copy .eyebrow{
+  font-size:12px;
+}
+.service-tag{
+  padding:5px 9px;
+  font-size:9px;
+  font-weight:760;
+}
+.project-type{
+  display:inline-flex;
+  align-items:center;
+  width:max-content;
+  padding:5px 9px;
+  border-radius:999px;
+  background:var(--purple-soft);
+  font-size:9px;
+  line-height:1;
+}
+.rewrite-tabs{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:7px;
+}
+.rewrite-tab{
+  min-width:0;
+  padding-inline:6px;
+  white-space:nowrap;
+}
+.rewrite-stage{min-height:305px}
+.editor-scene{min-height:490px}
+
+@media(max-width:620px){
+  .eyebrow,
+  .section-heading .eyebrow,
+  .editing-copy .eyebrow,
+  .about-copy .eyebrow,
+  .contact-copy .eyebrow{
+    font-size:11px;
+    padding:6px 9px;
+  }
+  .rewrite-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .rewrite-stage{min-height:340px}
+  .editor-scene{min-height:485px}
+}
