@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>مهدی افراشته | محتوا، UX Writing و کپی‌رایتینگ</title>
-  <meta name="description" content="سایت شخصی مهدی افراشته؛ کارشناس ارشد محتوا، یواِکس‌رایتر و کپی‌رایتر با تمرکز بر محتوای محصول، تجربه کاربر و استراتژی محتوا.">
+  <title>مهدی افراشته | UX Writer و Content Designer</title>
+  <meta name="description" content="سایت شخصی مهدی افراشته؛ UX Writer و Content Designer با تمرکز بر محتوای محصول، تجربه کاربر، معماری محتوا و کپی‌رایتینگ">
   <meta name="theme-color" content="#7357e8">
   <link rel="canonical" href="https://mafrashteh.github.io/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -12,9 +12,7 @@
   <link rel="preload" href="/assets/fonts/Estedad-wght.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="/assets/fonts/Yekan.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <link rel="stylesheet" href="/assets/css/site.css">
-  <link rel="stylesheet" href="/assets/css/site-sections.css">
-  <link rel="stylesheet" href="/assets/css/site-responsive.css">
+  <link rel="stylesheet" href="/assets/css/portfolio-v2.css">
 </head>
 <body>
   <div class="scroll-progress" aria-hidden="true"></div>
@@ -22,7 +20,7 @@
 
   <div class="top-note">
     <div class="container top-note__inner">
-      <span>هنوز دارم اینجا رو سر و شکل می‌دم؛ همین روزها از نسخۀ نهایی رونمایی می‌کنم :)</span>
+      هنوز دارم اینجا رو سر و شکل می‌دم؛ همین روزها از نسخۀ نهایی رونمایی می‌کنم :)
     </div>
   </div>
 
@@ -38,37 +36,36 @@
       </button>
 
       <nav id="site-nav" class="site-nav" aria-label="منوی اصلی">
-        <a href="#services">زمینه‌های همکاری</a>
         <a href="#work">پروژه‌ها</a>
-        <a href="#editing">ویرایش محتوا</a>
+        <a href="#services">زمینه‌های همکاری</a>
         <a href="#process">روش کار</a>
         <a href="#about">درباره من</a>
+        <a href="#contact">ارتباط با من</a>
       </nav>
 
-      <a class="header-cta" href="#contact">گفت‌وگو کنیم</a>
+      <a class="header-cta" href="#contact">شروع همکاری</a>
     </div>
   </header>
 
   <main id="main">
-    <section id="top" class="hero section-pad">
+    <section id="top" class="hero">
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <h1>محصولتان را <mark>«خواندنی»</mark> کنید.</h1>
+          <h1>محصولتان را <mark>«خواندنی»</mark> کنید</h1>
           <p class="hero-lead">در یک محصول دیجیتال حرفه‌ای، متن به‌اندازۀ طراحی اهمیت دارد. من هم کمک می‌کنم متن‌های محصولتان دقیق، ساده، روان و خواندنی باشند.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#work">دیدن نمونه‌کارها <span aria-hidden="true">←</span></a>
-            <a class="btn btn-ghost" href="#contact">شروع همکاری</a>
+            <a class="btn btn-primary" href="/assets/files/mahdi-afrashteh-resume.pdf" download>دانلود رزومۀ من <i class="fa-solid fa-download" aria-hidden="true"></i></a>
+            <a class="btn btn-secondary" href="#contact">شروع همکاری</a>
           </div>
         </div>
 
-        <div class="editor-scene reveal" data-copy-lab aria-label="نمونه بازنویسی متن محصول">
-          <div class="editor-window">
-            <div class="editor-toolbar">
+        <div class="copy-lab reveal" data-copy-lab aria-label="نمونه بازنویسی متن محصول">
+          <div class="copy-window">
+            <div class="window-bar">
               <div class="window-dots"><i></i><i></i><i></i></div>
               <span>content-review.fig</span>
               <b>Editing</b>
             </div>
-
             <div class="rewrite-lab">
               <div class="rewrite-tabs" role="tablist" aria-label="نمونه‌های بازنویسی">
                 <button class="rewrite-tab is-active" type="button" role="tab" aria-selected="true" data-copy-tab="error">پیام خطا</button>
@@ -79,72 +76,31 @@
 
               <div class="rewrite-stage">
                 <article class="rewrite-slide is-active" data-copy-slide="error">
-                  <div class="rewrite-label"><i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i> پیام خطا</div>
-                  <div class="rewrite-before">
-                    <span>نسخۀ اولیه</span>
-                    <p>خطایی رخ داده است. دوباره تلاش کنید.</p>
-                  </div>
-                  <div class="rewrite-edit" aria-hidden="true">
-                    <span class="rewrite-cursor"></span>
-                    <em>در حال بازنویسی…</em>
-                  </div>
-                  <div class="rewrite-after">
-                    <span>نسخۀ بهتر</span>
-                    <p>اتصال قطع شد؛ اینترنت را بررسی کنید و دوباره تلاش کنید.</p>
-                    <small>مشکل مشخص است و قدم بعدی را می‌گوید.</small>
-                  </div>
+                  <div class="rewrite-label"><i class="fa-solid fa-circle-exclamation"></i> پیام خطا</div>
+                  <div class="rewrite-before"><span>نسخۀ اولیه</span><p>خطایی رخ داده است. دوباره تلاش کنید.</p></div>
+                  <div class="rewrite-edit"><span class="rewrite-cursor"></span><em>در حال بازنویسی…</em></div>
+                  <div class="rewrite-after"><span>نسخۀ بهتر</span><p>اتصال قطع شد؛ اینترنت را بررسی کنید و دوباره تلاش کنید.</p><small>مشکل روشن است و قدم بعدی مشخص</small></div>
                 </article>
 
                 <article class="rewrite-slide" data-copy-slide="404" hidden>
-                  <div class="rewrite-label"><i class="fa-regular fa-file-lines" aria-hidden="true"></i> صفحۀ ۴۰۴</div>
-                  <div class="rewrite-before">
-                    <span>نسخۀ اولیه</span>
-                    <p>404 — صفحه پیدا نشد.</p>
-                  </div>
-                  <div class="rewrite-edit" aria-hidden="true">
-                    <span class="rewrite-cursor"></span>
-                    <em>در حال بازنویسی…</em>
-                  </div>
-                  <div class="rewrite-after">
-                    <span>نسخۀ بهتر</span>
-                    <p>این صفحه پیدا نشد؛ شاید جابه‌جا شده یا آدرسش تغییر کرده.</p>
-                    <small>کاربر را در بن‌بست رها نمی‌کنیم.</small>
-                    <button type="button" class="mini-action" tabindex="-1">برگشت به صفحۀ اصلی</button>
-                  </div>
+                  <div class="rewrite-label"><i class="fa-regular fa-file-lines"></i> صفحۀ ۴۰۴</div>
+                  <div class="rewrite-before"><span>نسخۀ اولیه</span><p>۴۰۴ — صفحه پیدا نشد.</p></div>
+                  <div class="rewrite-edit"><span class="rewrite-cursor"></span><em>در حال بازنویسی…</em></div>
+                  <div class="rewrite-after"><span>نسخۀ بهتر</span><p>این صفحه پیدا نشد؛ شاید جابه‌جا شده یا آدرسش تغییر کرده.</p><button class="mini-action" type="button" tabindex="-1">برگشت به صفحۀ اصلی</button></div>
                 </article>
 
                 <article class="rewrite-slide" data-copy-slide="faq" hidden>
-                  <div class="rewrite-label"><i class="fa-regular fa-circle-question" aria-hidden="true"></i> سوالات متداول</div>
-                  <div class="rewrite-before">
-                    <span>نسخۀ اولیه</span>
-                    <p>هزینه سرویس چقدره؟ چطور ثبت‌نام کنم؟ برای شروع باید چی کار کنم؟ پشتیبانی دارید؟</p>
-                  </div>
-                  <div class="rewrite-edit" aria-hidden="true">
-                    <span class="rewrite-cursor"></span>
-                    <em>در حال بازنویسی…</em>
-                  </div>
-                  <div class="rewrite-after">
-                    <span>نسخۀ بهتر</span>
-                    <p>هزینۀ سرویس چقدر است؟ چطور حساب بسازم؟ برای شروع چه مراحلی را باید انجام دهم؟ اگر به مشکل خوردم چطور با پشتیبانی در ارتباط باشم؟</p>
-                    <small>همان پرسش‌ها؛ روشن‌تر، یکدست‌تر و قابل اسکن‌تر.</small>
-                  </div>
+                  <div class="rewrite-label"><i class="fa-regular fa-circle-question"></i> سوالات متداول</div>
+                  <div class="rewrite-before"><span>نسخۀ اولیه</span><p>هزینه چقدره؟ چطور ثبت‌نام کنم؟ پشتیبانی دارید؟ ارسال چطور انجام میشه؟</p></div>
+                  <div class="rewrite-edit"><span class="rewrite-cursor"></span><em>در حال بازنویسی…</em></div>
+                  <div class="rewrite-after"><span>نسخۀ بهتر</span><p>هزینه استفاده چقدر است؟ چطور ثبت‌نام کنم؟ پشتیبانی به چه شکل ارائه می‌شود؟ ارسال چگونه انجام می‌شود؟</p><small>همان سوال‌ها، دقیق‌تر و یکدست‌تر</small></div>
                 </article>
 
                 <article class="rewrite-slide" data-copy-slide="guide" hidden>
-                  <div class="rewrite-label"><i class="fa-regular fa-compass" aria-hidden="true"></i> راهنمای محصول</div>
-                  <div class="rewrite-before">
-                    <span>نسخۀ اولیه</span>
-                    <p>برای استفاده از این قابلیت، وارد پنل شوید و تنظیمات لازم را انجام دهید.</p>
-                  </div>
-                  <div class="rewrite-edit" aria-hidden="true">
-                    <span class="rewrite-cursor"></span>
-                    <em>در حال بازنویسی…</em>
-                  </div>
-                  <div class="rewrite-after">
-                    <span>نسخۀ بهتر</span>
-                    <p>وارد پنل شوید، از منوی تنظیمات این قابلیت را فعال کنید، گزینه‌های موردنیاز را مشخص کنید و در پایان «ذخیره» را بزنید.</p>
-                    <small>همان راهنما؛ این‌بار مرحله‌به‌مرحله و قابل انجام.</small>
-                  </div>
+                  <div class="rewrite-label"><i class="fa-regular fa-compass"></i> راهنمای محصول</div>
+                  <div class="rewrite-before"><span>نسخۀ اولیه</span><p>برای استفاده از این قابلیت وارد پنل شوید و تنظیمات را انجام دهید.</p></div>
+                  <div class="rewrite-edit"><span class="rewrite-cursor"></span><em>در حال بازنویسی…</em></div>
+                  <div class="rewrite-after"><span>نسخۀ بهتر</span><p>وارد پنل شوید، تنظیمات اولیه را کامل کنید و سپس اولین ارسال را انجام دهید.</p><small>همان راهنما، روشن‌تر و مرحله‌محور</small></div>
                 </article>
               </div>
             </div>
@@ -153,60 +109,17 @@
       </div>
     </section>
 
-    <section id="services" class="section-pad services-section">
+    <section id="work" class="section section--soft">
       <div class="container">
-        <div class="section-heading reveal">
-          <span class="eyebrow">زمینه‌های همکاری</span>
-          <h2>در این بخش‌ها می‌توانم به محصولتان کمک کنم.</h2>
-          <p>از میکروکپی و پیام‌های خطا تا ساختار صفحه، سوالات متداول و راهنمای استفاده؛ نوع همکاری می‌تواند بسته به مسئله متفاوت باشد.</p>
+        <div class="section-head reveal">
+          <div><span class="eyebrow">پروژه‌های منتخب</span><h2>بخشی از کارهایی که انجام داده‌ام</h2></div>
+          <p>چهار نمونه از تجربه من در محتوای محصول، سئو و ارتباطات داخلی</p>
         </div>
 
-        <div class="service-grid">
-          <article class="service-card service-card--purple reveal">
-            <div class="service-top"><span class="service-no">01</span><span class="service-tag">Product Content</span></div>
-            <div class="service-demo demo-flow" aria-hidden="true">
-              <div class="flow-node">ورود</div><i></i><div class="flow-node active">کد تایید</div><i></i><div class="flow-node">موفقیت</div>
-            </div>
-            <h3>UX Writing و محتوای محصول</h3>
-            <p>متن رابط کاربری، جریان‌ها، فرم‌ها، پیام‌های خطا و نقاط تصمیم؛ با هدف کاهش ابهام و اصطکاک.</p>
-            <ul><li>Microcopy</li><li>User Flow</li><li>Error States</li></ul>
-          </article>
-
-          <article class="service-card service-card--green reveal">
-            <div class="service-top"><span class="service-no">02</span><span class="service-tag">Content Strategy</span></div>
-            <div class="service-demo demo-outline" aria-hidden="true">
-              <span>H1</span><div><i></i><b>پیام اصلی</b></div><div><i></i><b>مزایا</b></div><div><i></i><b>اعتماد</b></div><div><i></i><b>CTA</b></div>
-            </div>
-            <h3>استراتژی و معماری محتوا</h3>
-            <p>اولویت پیام‌ها، ساختار صفحه، استانداردهای لحن و فرایندی که محتوا را قابل توسعه و نگهداری کند.</p>
-            <ul><li>Information Architecture</li><li>Voice & Tone</li><li>Content System</li></ul>
-          </article>
-
-          <article class="service-card service-card--pink reveal">
-            <div class="service-top"><span class="service-no">03</span><span class="service-tag">Copywriting</span></div>
-            <div class="service-demo demo-copy" aria-hidden="true">
-              <span class="copy-badge">قبل</span><p class="strike">راهکاری حرفه‌ای و بی‌نظیر</p>
-              <span class="copy-badge is-after">بعد</span><p>ارسال پیامک، بدون پیچیدگی اضافه.</p>
-            </div>
-            <h3>کپی‌رایتینگ و صفحات وب</h3>
-            <p>لندینگ‌پیج، صفحات محصول و پیام‌های بازاریابی؛ با تمرکز بر ارزش واقعی و زبان قابل فهم.</p>
-            <ul><li>Landing Page</li><li>Value Proposition</li><li>CTA</li></ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="work" class="section-pad work-section">
-      <div class="container">
-        <div class="section-heading section-heading--split reveal">
-          <div><span class="eyebrow">پروژه‌های منتخب</span><h2>نمونه‌هایی از مسئله‌هایی که با محتوا حل کرده‌ام.</h2></div>
-          <p>از محتوای محصول و UX Writing تا لندینگ‌پیج، سئو و ارتباطات داخلی؛ این‌ها بخشی از پروژه‌هایی هستند که روی آن‌ها کار کرده‌ام.</p>
-        </div>
-
-        <div class="project-list">
-          <article class="project-row project-row--brand reveal">
-            <div class="project-main">
-              <span class="project-type">محتوای محصول · UX Writing · Content Design</span>
+        <div class="project-grid">
+          <article class="project-card reveal">
+            <div>
+              <span class="project-type">محتوای محصول · UX Writing</span>
               <h3>کاوه‌نگار</h3>
               <ul class="project-points">
                 <li>بازطراحی محتوای صفحات سرویس و قابلیت‌های پیامکی</li>
@@ -214,133 +127,210 @@
                 <li>بازنویسی ساختار صفحات، مزایا، سوالات متداول و سناریوهای استفاده</li>
                 <li>تدوین بریف تصویری یکپارچه برای نسخه‌های روشن و تیره</li>
               </ul>
-              <div class="project-tags"><span>Product Pages</span><span>UX Writing</span><span>FAQ</span><span>Content Architecture</span><span>Visual Brief</span></div>
             </div>
-            <div class="project-art project-logo-stage project-logo-stage--kaveh">
-              <img class="project-logo" src="https://camo.githubusercontent.com/9c48539d5bef7ae391632217d73aff58cd4d1a48/687474703a2f2f6b6176656e656761722e636f6d2f7075626c69632f696d616765732f6c6f676f2e706e67" alt="لوگوی کاوه‌نگار" loading="lazy">
-              <span class="project-logo-fallback">کاوه‌نگار</span>
+            <div class="logo-stage logo-stage--kaveh">
+              <img src="data:image/webp;base64,UklGRr4FAABXRUJQVlA4WAoAAAAQAAAAdgAAdgAAQUxQSBgAAAABUNC2DVP+pEvh7UREQmO+/+//+z8RYC1WUDgggAUAANAgAJ0BKncAdwA+KRSHQyGhCYSuRAwBQllCha20mmQ+XroA3FXdAfpL/K95V4AD9gPRd/yXuH/tD+wHs6ast4A/gHaZ/KfCHwL9+/ZnJx/cfy2/KP4R/lHygewPpA8gn9i/KryM9hB+a/2r8m9Ux/w/kk+B9QA/H/+Y/Kr/AfR1+7/7r+9/lL7bvm//fe4L/LP5z/qf1//7f+L8Dv7AeyJ+x5AHMqGQgYOSkgHNiVg3WXYRVxD6x9RmGS/fdzku/UJtCv6ReMRPK/e3K2TAXyKTlmzh8zn1My/bMjcmeOnPbL2mnwjTK3c33RP/CAr8CduYbkNdFU54d9kM42/1f/T7hpK2VDIQMHJSVsqGGAAA/v/pJgCx2wFABmEZEoaUOg43M50/+ZXy2jq6BnLh762FeOyBKS8Fn1Jx59FSHAXyFXGsf/mMnepOaJ80RUdfuLlVs34OpKCgHoswOmFuGCQCsG2FV/5fv+OYT+YuAeI8KulB6bzEkoA0qdvsoXG83ttzR3k5qSSIVz8hPGtGeXkhlpmGQS0kr4eRJzBEdoNjURJGpAEZcpXpAYl9/yuY0WaThB78VA3HtNx4C0nlQVH7JDmhxDPZY/oj+R5rP8Wde5aa6wkDj/3Gruqjp/ELCF6OE90AOVGAyeAE2UO/9c/qaDTXaDw6PAT1+ylTvpO8UoLeLm6Rs7qcnaLD4IfPOBHvs5R4Y4uecFXfBbgQfs/qc7SbWT6NieDeP+OFfh5eyHKGauKQa1W03+FRvLADMzbv8oHbSRX/B8fmXH6PrRNfSq/EIVh5Wa/ZF+sKTscEDBIGBS0f+KtyH5t4Ur7tG/62fV5/1b6UgetVB1CdQtXiDaDAkJ9ve4kpzIEAglhYv/aCclgH3Wnj8jNwu3qWS8hvLDwC73CcY0rdf3Ki24H2wjB5Im/yz1A4sO8kBC3ydxHyRC0HbT9xku+510zyuYABd1JOG/08QCn+DDJQHEYCXm4PJ33/JnJ+l3D6Th/7C9uCDP8vzvXTZpt6CtyMpiqpEJ+ilaE/7S92e9DJ4m5s1Or0bemTsuiuqNccf23ED1i4Ju5bHIPiwTF6+v4l9jnXrc3mdgDuGUwgPy6CRC0ALFA2JgmPtN3/JrYhG+2vx3ZBb+5ppIIW5SarweuzvrXU3//1GdV34bqP/wlouUXd59O0WXIvuNECbvlZu24n0CobeTICyGtd94T5/Wz6OhBZf6OD8Hlev41zfwt+X5sT8Tdz7JU//CYFnPYVz9YU/38IqnSTcdk62HjJOAE6Xxo8tNd4eUfeSRNyd+fC02/8jE0YBeEG5f//RehPz1fhoe/wpvLlfZWv3R/W7JLnv1DHf7N3phAK1C7hq9aPHf7Q2st0hVEvHgNJMr4TqFTsASlJSguzWpa2qvlUGWh305m8RX0GgnLEtP8Dcbstz7KLJ7sHdCavkAosEFxAszYCife3pEDDavEl9pMk77z//qIpv5sIe7xu4s+YGX5xJKnuw/92XrlxKdEQFgHv8rmPUgk3leNezeHIkXEKPyESJg61SzwzhEm3iJv+JP0z+BW4cM6T88bx14ZnvTVU4E1fLt0nSEIPDzV6frYgKiXVRjoOLqyo4JeNKKZuQL2eEVlysxqKwrpTi3ljx99H62/+OfX0XIzpx+p5GWw3A2Fks70f5sFx/X+fKxNgwPxl8kSUYTWtjvtpyBMEeRj1uVbZfJiLMMqj8Bc2pAInFwghGoEwGj1juS+KUmfd4GgWEWFuaGSTK64xvYA5kFp3EX/1s3f/+3tiVyFJn20NKqmN5P3KBIl4gf0TDecFIvEGGrY5Tg4PLaNUizKCOVeBydYpZDwJrsV8vj3Oj7iFApYgUn13PLiqFtl/x+mwAAAAAAA=" alt="لوگوی کاوه‌نگار">
             </div>
           </article>
 
-          <article class="project-row project-row--brand reveal">
-            <div class="project-main">
-              <span class="project-type">لندینگ‌پیج · محتوای سئو · فرایند محتوا</span>
+          <article class="project-card reveal">
+            <div>
+              <span class="project-type">لندینگ‌پیج · سئو · فرایند محتوا</span>
               <h3>قبضینو</h3>
               <ul class="project-points">
                 <li>طراحی و تدوین فرایند تولید محتوای تیم محتوا و سئو</li>
                 <li>تولید و به‌روزرسانی بیش از ۶۰ لندینگ‌پیج و ۱۵۰ محتوای وبلاگ و رپورتاژ</li>
                 <li>افزایش تا ۱۰۰٪ بازدید برخی محتواها پس از به‌روزرسانی</li>
-                <li>رسیدن ۹۰٪ محتواهای تولیدشده به صفحۀ اول گوگل برای کلمات کلیدی مرتبط</li>
+                <li>رسیدن ۹۰٪ محتواهای تولیدشده به صفحۀ اول گوگل</li>
               </ul>
-              <div class="project-tags"><span>60+ Landing Pages</span><span>150+ Articles</span><span>SEO</span><span>Content Process</span></div>
             </div>
-            <div class="project-art project-logo-stage project-logo-stage--ghabzino">
-              <img class="project-logo project-logo--square" src="https://cdn.aptoide.com/imgs/0/a/1/0a1bec91e3a312b8d0704fce5390ae1f_icon.png" alt="لوگوی قبضینو" loading="lazy">
-              <span class="project-logo-fallback">قبضینو</span>
+            <div class="logo-stage logo-stage--ghabzino">
+              <img src="https://cdn.aptoide.com/imgs/0/a/1/0a1bec91e3a312b8d0704fce5390ae1f_icon.png" alt="لوگوی قبضینو" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+              <span class="logo-fallback">قبضینو</span>
             </div>
           </article>
 
-          <article class="project-row project-row--brand reveal">
-            <div class="project-main">
+          <article class="project-card reveal">
+            <div>
               <span class="project-type">محتوای تخصصی · سئو · B2B</span>
               <h3>هوفر</h3>
               <ul class="project-points">
                 <li>ساده‌سازی مفاهیم پیچیدۀ مالی، مالیاتی و حسابداری ابری</li>
-                <li>تبدیل موضوعاتی مثل مالیات تکلیفی و حقوق و دستمزد به محتوای کاربردی و قابل‌فهم</li>
+                <li>تبدیل موضوعاتی مثل مالیات تکلیفی و حقوق و دستمزد به محتوای کاربردی</li>
                 <li>تولید مقالات بهینه‌شده برای موتورهای جست‌وجو</li>
                 <li>نوشتن رپورتاژ و محتوای تبلیغاتی برای افزایش آگاهی از برند در بازار B2B</li>
               </ul>
-              <div class="project-tags"><span>Accounting</span><span>SEO Content</span><span>Advertorial</span><span>B2B</span></div>
             </div>
-            <div class="project-art project-logo-stage project-logo-stage--hoofer">
-              <img class="project-logo" src="https://logo.clearbit.com/hoofer.cloud" alt="لوگوی هوفر" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-              <span class="project-logo-fallback">HOOFER</span>
+            <div class="logo-stage logo-stage--hoofer">
+              <img src="data:image/webp;base64,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" alt="لوگوی هوفر">
             </div>
           </article>
 
-          <article class="project-row project-row--brand reveal">
-            <div class="project-main">
-              <span class="project-type">ارتباطات داخلی · برند کارفرمایی · کمپین</span>
-              <h3>گروه آرین / آرین موتور</h3>
+          <article class="project-card reveal">
+            <div>
+              <span class="project-type">ارتباطات داخلی · کمپین</span>
+              <h3>گروه آرین</h3>
               <ul class="project-points">
                 <li>نوشتن متن ایمیل‌های اطلاع‌رسانی داخلی</li>
                 <li>طراحی و تدوین شیوه‌نامۀ نگارشی ارتباطات داخلی</li>
                 <li>برنامه‌ریزی و تولید محتوای بیش از ۱۲ کمپین سازمانی</li>
                 <li>روایت مفاهیم منابع انسانی، فرهنگ سازمانی و ارتباطات داخلی</li>
               </ul>
-              <div class="project-tags"><span>12+ Campaigns</span><span>Internal Comms</span><span>Employer Brand</span><span>Writing Guidelines</span></div>
             </div>
-            <div class="project-art project-logo-stage project-logo-stage--arian">
-              <img class="project-logo" src="https://logo.clearbit.com/arian-motor.com" alt="لوگوی آرین موتور" loading="lazy" onerror="this.src='https://pkhauto.com/uploads/blog/arian%20motor-min.jpg'">
-              <span class="project-logo-fallback">ARIAN MOTOR</span>
+            <div class="logo-stage logo-stage--arian">
+              <img src="https://logo.clearbit.com/arian-motor.com" alt="لوگوی گروه آرین" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+              <span class="logo-fallback">گروه آرین</span>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="editing" class="section-pad editing-section">
-      <div class="container editing-grid">
-        <div class="editing-copy reveal">
-          <span class="eyebrow">ویرایش محتوا</span>
-          <h2>محتوا فقط «قشنگ‌تر کردن جمله» نیست.</h2>
-          <p>یک بازنویسی خوب باید ابهام را کم کند، هدف را روشن کند و کاربر را به قدم بعدی برساند. نمونه ساده زیر دقیقاً همین تفاوت را نشان می‌دهد.</p>
-          <div class="editing-legend"><span><i class="legend-red"></i> حذف ابهام</span><span><i class="legend-green"></i> اضافه‌کردن راه بعدی</span></div>
-        </div>
-
-        <div class="revision-card reveal" data-revision>
-          <div class="revision-head"><span>نمونه ویرایش · پیام خطا</span><b>v2</b></div>
-          <div class="revision-before"><small>قبل</small><p>خطایی رخ داده است. دوباره تلاش کنید.</p></div>
-          <div class="revision-mark" aria-hidden="true">↓</div>
-          <div class="revision-after"><small>بعد</small><p>اتصال قطع شد؛ اینترنت را بررسی کنید و دوباره تلاش کنید.</p><span class="revision-note">مشکل مشخص شد + اقدام بعدی روشن شد</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="process" class="section-pad process-section">
+    <section id="services" class="section">
       <div class="container">
-        <div class="section-heading reveal"><span class="eyebrow">روش کار</span><h2>قبل از نوشتن، باید بدانیم چه چیزی را چرا می‌نویسیم.</h2></div>
-        <div class="process-track">
-          <article class="process-step reveal"><span>01</span><div class="step-icon">?</div><h3>فهم مسئله</h3><p>هدف کسب‌وکار، وضعیت کاربر، محدودیت محصول و داده‌های موجود را کنار هم می‌گذارم.</p></article>
-          <article class="process-step reveal"><span>02</span><div class="step-icon">☷</div><h3>ساختار پیام</h3><p>مشخص می‌کنم چه چیزی باید اول گفته شود، چه چیزی بعدتر و چه چیزی اصلاً لازم نیست.</p></article>
-          <article class="process-step reveal"><span>03</span><div class="step-icon">Aa</div><h3>نوشتن</h3><p>نسخه اولیه را با زبان طبیعی، لحن متناسب و کمترین اصطکاک ممکن می‌نویسم.</p></article>
-          <article class="process-step reveal"><span>04</span><div class="step-icon">✓</div><h3>بازبینی</h3><p>متن را با طراحی، بازخورد و رفتار واقعی کاربر تطبیق می‌دهم و نسخه را بهتر می‌کنم.</p></article>
+        <div class="section-head reveal">
+          <div><span class="eyebrow">زمینه‌های همکاری</span><h2>جایی که می‌توانم کمک کنم</h2></div>
+          <p>سه مسیر اصلی همکاری من با تیم‌های محصول و محتوا</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <div class="service-demo demo-ux" aria-hidden="true">
+              <div class="ux-flow">
+                <div class="ux-message">خطایی رخ داده است؛ دوباره تلاش کنید</div>
+                <div class="ux-actions"><span>انصراف</span><span>دوباره تلاش کنید</span></div>
+              </div>
+            </div>
+            <h3>UX Writing و محتوای محصول</h3>
+            <p>متن رابط کاربری، جریان‌ها، فرم‌ها، پیام‌های خطا و نقاط تصمیم با هدف کاهش ابهام و اصطکاک</p>
+            <div class="service-tags"><span>Microcopy</span><span>User Flow</span><span>Error States</span></div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-demo demo-structure" aria-hidden="true">
+              <div class="structure-grid">
+                <div class="structure-block">پیام اصلی</div>
+                <div class="structure-block">مزایا و اثبات ارزش</div>
+                <div class="structure-block">دعوت به اقدام</div>
+              </div>
+            </div>
+            <h3>استراتژی و معماری محتوا</h3>
+            <p>اولویت پیام‌ها، ساختار صفحه، استانداردهای لحن و فرایندی که محتوا را قابل توسعه و نگهداری کند</p>
+            <div class="service-tags"><span>Information Architecture</span><span>Voice & Tone</span><span>Content System</span></div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-demo demo-copy" aria-hidden="true">
+              <div class="copy-row copy-old">راهکاری حرفه‌ای و بی‌نظیر</div>
+              <div class="copy-row copy-new">ارسال پیامک، بدون پیچیدگی اضافه</div>
+            </div>
+            <h3>کپی‌رایتینگ و صفحات وب</h3>
+            <p>لندینگ‌پیج، صفحات محصول و پیام‌های بازاریابی با تمرکز بر ارزش واقعی و زبان قابل‌فهم</p>
+            <div class="service-tags"><span>Landing Page</span><span>Value Proposition</span><span>CTA</span></div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section-pad about-section">
+    <section id="process" class="section section--soft">
+      <div class="container">
+        <div class="section-head section-head--single reveal">
+          <span class="eyebrow">روش کار</span>
+          <h2>از مسئله تا متن نهایی</h2>
+          <p>اول مسئله و موقعیت کاربر را روشن می‌کنم، بعد سراغ ساختار و نوشتن می‌روم</p>
+        </div>
+
+        <div class="process-grid">
+          <article class="process-card reveal">
+            <div class="process-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <h3>شناخت مسئله</h3>
+            <p>هدف کسب‌وکار، نیاز کاربر، محدودیت محصول و اطلاعات موجود را بررسی می‌کنم</p>
+          </article>
+          <article class="process-card reveal">
+            <div class="process-icon"><i class="fa-solid fa-diagram-project"></i></div>
+            <h3>طراحی ساختار</h3>
+            <p>اولویت پیام‌ها، ترتیب اطلاعات و چیزهایی را که باید حذف یا اضافه شوند مشخص می‌کنم</p>
+          </article>
+          <article class="process-card reveal">
+            <div class="process-icon"><i class="fa-solid fa-pen-nib"></i></div>
+            <h3>نوشتن و بازنویسی</h3>
+            <p>نسخه‌های اولیه را می‌نویسم و تا رسیدن به متن دقیق، ساده و روان بازنویسی می‌کنم</p>
+          </article>
+          <article class="process-card reveal">
+            <div class="process-icon"><i class="fa-solid fa-arrows-rotate"></i></div>
+            <h3>بازبینی و بهینه‌سازی</h3>
+            <p>متن را با طراحی، بازخورد تیم و رفتار واقعی کاربر هماهنگ و اصلاح می‌کنم</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
       <div class="container about-grid">
-        <div class="about-note reveal" aria-hidden="true">
-          <div class="note-paper"><span>یادداشت کاری</span><h3>«کاربر دقیقاً باید اینجا چه چیزی بفهمد؟»</h3><i></i><i></i><i class="short"></i><div class="note-stamp">EDITED</div></div>
-          <div class="note-comment">ساده‌ترش کن ✦</div>
+        <div class="profile-frame reveal">
+          <img src="data:image/webp;base64,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" alt="مهدی افراشته">
         </div>
         <div class="about-copy reveal">
           <span class="eyebrow">درباره من</span>
-          <h2>من مهدی افراشته‌ام؛ بین محتوا، محصول و ارتباطات کار می‌کنم.</h2>
-          <p>برای من متن چیزی نیست که در پایان طراحی به صفحه اضافه شود. متن بخشی از تجربه محصول است و باید از همان ابتدا در کنار ساختار، هدف و رفتار کاربر دیده شود.</p>
-          <p>پس قبل از نوشتن، سؤال می‌پرسم؛ بعد اطلاعات را مرتب می‌کنم، پیچیدگی را کم می‌کنم و تا جایی بازنویسی می‌کنم که پیام به ساده‌ترین شکل درستش برسد.</p>
-          <div class="about-pills"><span>علوم ارتباطات</span><span>محصول دیجیتال</span><span>محتوای فارسی</span></div>
+          <h2>من مهدی افراشته هستم</h2>
+          <p>در تقاطع محتوا، محصول و ارتباطات کار می‌کنم. برای من متن چیزی نیست که در پایان طراحی به صفحه اضافه شود؛ متن بخشی از تجربه محصول است و باید از همان ابتدا در کنار هدف، ساختار و رفتار کاربر دیده شود.</p>
+          <p>تمرکز اصلی کارم روی UX Writing، محتوای محصول، معماری محتوا و ساده‌سازی پیام‌های پیچیده برای کاربر است. دانش‌آموختۀ علوم ارتباطات دانشگاه علامه طباطبائی هستم.</p>
+          <div class="about-meta"><span>UX Writing</span><span>Content Design</span><span>علوم ارتباطات</span></div>
+          <div class="about-actions">
+            <a class="btn btn-primary" href="/assets/files/mahdi-afrashteh-resume.pdf" download>دانلود رزومۀ من <i class="fa-solid fa-download"></i></a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/mafrashteh/" target="_blank" rel="noopener noreferrer">لینکدین من <i class="fa-brands fa-linkedin"></i></a>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="contact" class="contact-section">
       <div class="container contact-card reveal">
-        <div class="contact-copy"><span class="eyebrow">ارتباط</span><h2>اگر مسئله‌تان با «چی بگیم و چطور بگیم» شروع می‌شود، احتمالاً می‌توانیم درباره‌اش حرف بزنیم.</h2><p>فعلاً GitHub راه ارتباطی در دسترس این نسخه است؛ لینکدین، ایمیل و رزومه کامل را در مرحله بعد به سایت اضافه می‌کنم.</p><a class="btn btn-primary" href="https://github.com/mafrashteh" target="_blank" rel="noopener noreferrer">GitHub من <span aria-hidden="true">↗</span></a></div>
-        <div class="contact-visual" aria-hidden="true"><div class="comment-box"><span>Comment</span><p>شروع کنیم؟</p><i class="caret"></i></div></div>
+        <div class="contact-copy">
+          <span class="eyebrow">ارتباط با من</span>
+          <h2>برای همکاری، مستقیم با من در ارتباط باشید</h2>
+          <p>اگر درباره محتوای محصول، UX Writing یا بازنویسی صفحاتتان مسئله‌ای دارید، از یکی از راه‌های زیر پیام بدهید یا تماس بگیرید.</p>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="https://www.linkedin.com/in/mafrashteh/" target="_blank" rel="noopener noreferrer">صفحۀ لینکدین من <i class="fa-brands fa-linkedin"></i></a>
+            <a class="btn btn-secondary" href="tel:+989393287208">تماس مستقیم <i class="fa-solid fa-phone"></i></a>
+          </div>
+        </div>
+        <div class="contact-links">
+          <a class="contact-link" href="tel:+989393287208"><i class="fa-solid fa-phone"></i><span dir="ltr">0939 328 7208</span></a>
+          <a class="contact-link" href="https://www.linkedin.com/in/mafrashteh/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i><span>mafrashteh</span></a>
+          <a class="contact-link" href="https://t.me/mafrashteh_ir" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-telegram"></i><span>mafrashteh_ir</span></a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand"><span class="brand-mark">م</span><div><strong>مهدی افراشته</strong><p>محتوا، UX Writing و کپی‌رایتینگ برای محصولات دیجیتال.</p></div></div>
-      <div class="footer-links"><a href="#services">زمینه‌های همکاری</a><a href="#work">پروژه‌ها</a><a href="#process">روش کار</a><a href="#about">درباره من</a></div>
-      <div class="footer-copy">© <span id="year"></span> مهدی افراشته</div>
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <span class="brand-mark" aria-hidden="true"><i class="fa-solid fa-pen-nib"></i></span>
+          <div><strong>مهدی افراشته</strong><small>UX Writer · Content Designer</small></div>
+        </div>
+        <nav class="footer-nav" aria-label="منوی فوتر">
+          <a href="#work">پروژه‌ها</a>
+          <a href="#services">زمینه‌های همکاری</a>
+          <a href="#process">روش کار</a>
+          <a href="#about">درباره من</a>
+          <a href="#contact">ارتباط با من</a>
+        </nav>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/mafrashteh/" target="_blank" rel="noopener noreferrer" aria-label="لینکدین"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://t.me/mafrashteh_ir" target="_blank" rel="noopener noreferrer" aria-label="تلگرام"><i class="fa-brands fa-telegram"></i></a>
+          <a href="tel:+989393287208" aria-label="تماس مستقیم"><i class="fa-solid fa-phone"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> مهدی افراشته</span>
+        <span>محتوا، محصول و تجربه کاربر</span>
+      </div>
     </div>
   </footer>
 
-  <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/portfolio-v2.js" defer></script>
 </body>
 </html>
