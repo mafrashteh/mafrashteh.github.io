@@ -23,7 +23,6 @@
   <div class="top-note">
     <div class="container top-note__inner">
       <span>هنوز دارم اینجا رو سر و شکل می‌دم؛ همین روزها از نسخۀ نهایی رونمایی می‌کنم :)</span>
-      <a href="#work">نمونه پروژه‌ها <span aria-hidden="true">←</span></a>
     </div>
   </div>
 
@@ -54,51 +53,68 @@
     <section id="top" class="hero section-pad">
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <div class="hero-kicker"><span class="live-dot"></span> کارشناس ارشد محتوا · UX Writer · Copywriter</div>
-          <h1>پیچیدگی محصول را به محتوایی تبدیل می‌کنم که آدم‌ها <mark>بفهمند</mark>، اعتماد کنند و جلو بروند.</h1>
-          <p class="hero-lead">از معماری پیام و محتوای محصول تا میکروکپی و لندینگ‌پیج؛ مسئله را می‌فهمم، ساختار می‌دهم و متن را طوری بازنویسی می‌کنم که هم برای کاربر روشن باشد و هم برای کسب‌وکار کار کند.</p>
+          <h1>محصولتان را <mark>«خواندنی»</mark> طراحی کنید.</h1>
+          <p class="hero-lead">در یک محصول دیجیتال خوب، متن به‌اندازۀ طراحی اهمیت دارد. کمک می‌کنم متن‌های محصولتان دقیق، ساده، روان و خواندنی باشند؛ از پیام‌های خطا و دکمه‌ها تا مسیرها و صفحه‌های اصلی.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#work">دیدن پروژه‌ها <span aria-hidden="true">←</span></a>
-            <a class="btn btn-ghost" href="#process">روش کار من</a>
-          </div>
-          <div class="hero-meta" aria-label="تمرکزهای کاری">
-            <span><i class="dot dot-purple"></i> محتوای محصول</span>
-            <span><i class="dot dot-green"></i> استراتژی محتوا</span>
-            <span><i class="dot dot-pink"></i> کپی‌رایتینگ</span>
+            <a class="btn btn-primary" href="#work">دیدن نمونه‌کارها <span aria-hidden="true">←</span></a>
+            <a class="btn btn-ghost" href="#contact">شروع همکاری</a>
           </div>
         </div>
 
-        <div class="editor-scene reveal" aria-label="نمونه محیط ویرایش محتوا">
+        <div class="editor-scene reveal" data-copy-lab aria-label="نمونه بازنویسی متن محصول">
           <div class="editor-window">
             <div class="editor-toolbar">
               <div class="window-dots"><i></i><i></i><i></i></div>
-              <span>hero-copy-v03.txt</span>
-              <b>Saved</b>
+              <span>content-review.fig</span>
+              <b>Editing</b>
             </div>
-            <div class="editor-body">
-              <aside class="editor-outline" aria-hidden="true">
-                <span>ساختار</span>
-                <a class="is-active">H1</a>
-                <a>Value</a>
-                <a>CTA</a>
-                <a>Proof</a>
-              </aside>
-              <div class="editor-paper">
-                <div class="paper-label">نسخه 03 · بازنویسی هیرو</div>
-                <h2>کاربر باید در چند ثانیه بفهمد <span class="marker">چه ارزشی</span> می‌گیرد.</h2>
-                <p class="typed-line" data-typing="متن خوب فقط خوانده نمی‌شود؛ مسیر بعدی را روشن می‌کند."></p>
-                <div class="copy-lines" aria-hidden="true"><i></i><i></i><i></i></div>
-                <div class="edit-row">
-                  <span class="old-copy">راهکارهای جامع و نوآورانه</span>
-                  <span class="replace-arrow">←</span>
-                  <span class="new-copy">مسیر روشن‌تر برای کاربر</span>
-                </div>
-                <div class="inline-comment"><span>م</span><p>کوتاه‌تر، مشخص‌تر و نزدیک‌تر به زبان کاربر.</p></div>
+
+            <div class="rewrite-lab">
+              <div class="rewrite-tabs" role="tablist" aria-label="نمونه‌های بازنویسی">
+                <button class="rewrite-tab is-active" type="button" role="tab" aria-selected="true" data-copy-tab="error">پیام خطا</button>
+                <button class="rewrite-tab" type="button" role="tab" aria-selected="false" data-copy-tab="404">صفحۀ ۴۰۴</button>
               </div>
+
+              <div class="rewrite-stage">
+                <article class="rewrite-slide is-active" data-copy-slide="error">
+                  <div class="rewrite-label"><i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i> پیام خطا</div>
+                  <div class="rewrite-before">
+                    <span>نسخۀ اولیه</span>
+                    <p>خطایی رخ داده است. دوباره تلاش کنید.</p>
+                  </div>
+                  <div class="rewrite-edit" aria-hidden="true">
+                    <span class="rewrite-cursor"></span>
+                    <em>در حال بازنویسی…</em>
+                  </div>
+                  <div class="rewrite-after">
+                    <span>نسخۀ بهتر</span>
+                    <p>اتصال قطع شد؛ اینترنت را بررسی کنید و دوباره تلاش کنید.</p>
+                    <small>مشکل مشخص است و قدم بعدی را می‌گوید.</small>
+                  </div>
+                </article>
+
+                <article class="rewrite-slide" data-copy-slide="404" hidden>
+                  <div class="rewrite-label"><i class="fa-regular fa-file-lines" aria-hidden="true"></i> Empty State · 404</div>
+                  <div class="rewrite-before">
+                    <span>نسخۀ اولیه</span>
+                    <p>404 — صفحه پیدا نشد.</p>
+                  </div>
+                  <div class="rewrite-edit" aria-hidden="true">
+                    <span class="rewrite-cursor"></span>
+                    <em>در حال بازنویسی…</em>
+                  </div>
+                  <div class="rewrite-after">
+                    <span>نسخۀ بهتر</span>
+                    <p>این صفحه اینجا نیست؛ شاید جابه‌جا شده یا آدرسش تغییر کرده.</p>
+                    <small>کاربر را بن‌بست نمی‌گذاریم.</small>
+                    <button type="button" class="mini-action" tabindex="-1">برگشت به صفحۀ اصلی</button>
+                  </div>
+                </article>
+              </div>
+
+              <div class="rewrite-note"><i class="fa-solid fa-pen-nib" aria-hidden="true"></i><span>متن خوب فقط واضح نیست؛ راه بعدی را هم نشان می‌دهد.</span></div>
             </div>
           </div>
-          <div class="floating-chip chip-tone">لحن: روشن و انسانی</div>
-          <div class="floating-chip chip-score">وضوح <strong>+۲۴٪</strong></div>
         </div>
       </div>
     </section>
