@@ -107,6 +107,55 @@
     }
   }
 
+
+  // Hero copy lab
+  const copyLab = document.querySelector('[data-copy-lab]');
+  if (copyLab) {
+    const tabs = [...copyLab.querySelectorAll('[data-copy-tab]')];
+    const slides = [...copyLab.querySelectorAll('[data-copy-slide]')];
+    let activeIndex = 0;
+    let autoplay;
+
+    const animateSlide = slide => {
+      slides.forEach(item => item.classList.remove('is-editing', 'is-edited'));
+      if (reduced) {
+        slide.classList.add('is-edited');
+        return;
+      }
+      slide.classList.add('is-editing');
+      setTimeout(() => slide.classList.add('is-edited'), 1050);
+    };
+
+    const showSlide = index => {
+      activeIndex = (index + slides.length) % slides.length;
+      tabs.forEach((tab, i) => {
+        const active = i === activeIndex;
+        tab.classList.toggle('is-active', active);
+        tab.setAttribute('aria-selected', String(active));
+      });
+      slides.forEach((slide, i) => {
+        const active = i === activeIndex;
+        slide.hidden = !active;
+        slide.classList.toggle('is-active', active);
+      });
+      animateSlide(slides[activeIndex]);
+    };
+
+    const startAutoplay = () => {
+      if (reduced) return;
+      clearInterval(autoplay);
+      autoplay = setInterval(() => showSlide(activeIndex + 1), 5200);
+    };
+
+    tabs.forEach((tab, i) => tab.addEventListener('click', () => {
+      showSlide(i);
+      startAutoplay();
+    }));
+
+    showSlide(0);
+    startAutoplay();
+  }
+
   if ('IntersectionObserver' in window) {
     const sections = [...document.querySelectorAll('section[id]')];
     const sObs = new IntersectionObserver(entries => entries.forEach(entry => {
