@@ -199,3 +199,37 @@
   .project-logo{max-height:78px}
   .project-logo--square{max-width:82px;max-height:82px}
 }
+
+
+/* PROJECT BULLET CARDS V1 */
+.project-points{
+  display:grid;
+  gap:8px;
+  margin:12px 0 0;
+  padding:0;
+  list-style:none;
+}
+.project-points li{
+  position:relative;
+  padding-right:17px;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.85;
+}
+.project-points li::before{
+  content:"";
+  position:absolute;
+  right:0;
+  top:.78em;
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:var(--purple);
+  transform:translateY(-50%);
+}
+.project-index{display:none!important}
+
+@media(max-width:620px){
+  .project-points{gap:7px;margin-top:10px}
+  .project-points li{font-size:11px;line-height:1.8}
+}
