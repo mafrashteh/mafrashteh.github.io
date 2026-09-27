@@ -154,3 +154,48 @@
   .rewrite-stage{min-height:340px}
   .editor-scene{min-height:485px}
 }
+
+
+/* PROJECT BRAND CARDS V4 */
+.project-row--brand{grid-template-columns:1fr 250px;min-height:220px}
+.project-row--brand .project-main p{max-width:760px}
+.project-logo-stage{
+  min-height:150px;
+  height:100%;
+  padding:24px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+}
+.project-logo{
+  display:block;
+  max-width:82%;
+  max-height:96px;
+  object-fit:contain;
+  mix-blend-mode:multiply;
+}
+.project-logo--square{max-width:108px;max-height:108px;border-radius:22px}
+.project-logo-fallback{
+  display:none;
+  font-family:"Estedad","Yekan",Tahoma,sans-serif;
+  font-size:24px;
+  font-weight:850;
+  direction:ltr;
+  letter-spacing:-.02em;
+}
+.project-logo-stage--kaveh{background:#f4f1ff}
+.project-logo-stage--ghabzino{background:#e8f7e8}
+.project-logo-stage--hoofer{background:#f5f6f8}
+.project-logo-stage--arian{background:#fff1f1}
+.project-row--brand .project-tags{margin-top:16px}
+
+@media(max-width:900px){
+  .project-row--brand{grid-template-columns:1fr 210px}
+}
+@media(max-width:620px){
+  .project-row--brand{grid-template-columns:1fr}
+  .project-logo-stage{height:120px;min-height:120px;order:-1}
+  .project-logo{max-height:78px}
+  .project-logo--square{max-width:82px;max-height:82px}
+}
