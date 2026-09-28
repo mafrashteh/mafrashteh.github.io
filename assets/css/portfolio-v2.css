@@ -126,3 +126,33 @@ img{max-width:100%;display:block}
 @media(max-width:640px){.container{width:min(calc(100% - 28px),var(--container))}.section{padding:66px 0}.top-note{font-size:10px}.top-note__inner{min-height:42px;padding:7px 0;line-height:1.5}.header-inner{min-height:70px}.brand-mark{width:40px;height:40px;font-size:15px}.brand-text strong{font-size:13px}.brand-text small{font-size:8px}.hero{padding:54px 0 68px}.hero-copy h1{font-size:36px;line-height:1.36}.hero-lead{font-size:14px;line-height:2}.hero-actions{flex-direction:column}.hero-actions .btn{width:100%}.copy-lab{min-height:475px}.copy-window{inset:6px 0 8px 2px}.rewrite-lab{padding:14px}.rewrite-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}.rewrite-stage{min-height:338px}.rewrite-before p,.rewrite-after p{font-size:12px}.section-head{margin-bottom:28px}.section-head h2,.about-copy h2,.contact-copy h2{font-size:29px;line-height:1.5}.section-head p,.about-copy p,.contact-copy p{font-size:13px}.project-card{grid-template-columns:1fr;padding:19px}.logo-stage{height:104px;grid-row:1}.project-card h3{font-size:21px}.project-points li{font-size:10.5px}.services-grid{grid-template-columns:1fr}.service-demo{height:132px}.process-grid{grid-template-columns:1fr}.process-card{display:grid;grid-template-columns:46px 1fr;column-gap:12px;align-items:start;padding:17px}.process-icon{grid-row:1/3;margin:0;width:42px;height:42px}.process-card h3{margin-top:2px}.about-actions,.contact-actions{flex-direction:column}.about-actions .btn,.contact-actions .btn{width:100%}.contact-card{padding:24px 18px}.footer-main{grid-template-columns:1fr;gap:22px}.footer-bottom{flex-direction:column;gap:6px}.footer-social{justify-content:flex-start}}
 @media(max-width:390px){.hero-copy h1{font-size:33px}.rewrite-tab{font-size:8px}.section-head h2,.about-copy h2,.contact-copy h2{font-size:27px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}.rewrite-slide.is-edited .rewrite-after{opacity:1;transform:none}}
+
+
+/* MOBILE TITLE TUNING V2 */
+@media(max-width:640px){
+  .hero-copy h1{
+    font-size:26px;
+    line-height:1.35;
+    white-space:nowrap;
+    letter-spacing:-.04em;
+  }
+  .section-head h2,
+  .about-copy h2,
+  .contact-copy h2{
+    font-size:23px;
+    line-height:1.45;
+    white-space:nowrap;
+    letter-spacing:-.035em;
+  }
+  .project-card h3,
+  .service-card h3,
+  .process-card h3{
+    font-size:18px;
+  }
+}
+@media(max-width:390px){
+  .hero-copy h1{font-size:23px}
+  .section-head h2,
+  .about-copy h2,
+  .contact-copy h2{font-size:21px}
+}
