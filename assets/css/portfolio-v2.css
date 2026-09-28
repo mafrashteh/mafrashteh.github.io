@@ -156,3 +156,164 @@ img{max-width:100%;display:block}
   .about-copy h2,
   .contact-copy h2{font-size:21px}
 }
+
+
+/* FINAL POLISH V3 */
+
+/* Section headings: description always sits under the title */
+.section-head{
+  display:block;
+  margin-bottom:38px;
+}
+.section-head > div{
+  display:block;
+}
+.section-head p{
+  max-width:720px;
+  margin-top:10px;
+}
+.section-head--single{
+  max-width:740px;
+}
+
+/* Final responsive tuning */
+@media(max-width:980px){
+  .section-head{
+    display:block;
+    margin-bottom:30px;
+  }
+  .section-head p{
+    margin-top:8px;
+  }
+}
+
+@media(max-width:640px){
+  .container{
+    width:min(calc(100% - 24px),var(--container));
+  }
+  .section{
+    padding:56px 0;
+  }
+  .hero{
+    padding:48px 0 58px;
+  }
+  .hero-grid{
+    gap:30px;
+  }
+  .hero-copy h1{
+    font-size:24px;
+    line-height:1.42;
+    white-space:normal;
+    text-wrap:balance;
+    letter-spacing:-.035em;
+  }
+  .hero-lead{
+    margin-top:16px;
+    font-size:13px;
+    line-height:1.95;
+  }
+  .section-head{
+    margin-bottom:24px;
+  }
+  .section-head h2,
+  .about-copy h2,
+  .contact-copy h2{
+    font-size:21px;
+    line-height:1.5;
+    white-space:normal;
+    text-wrap:balance;
+    letter-spacing:-.025em;
+  }
+  .section-head p,
+  .about-copy p,
+  .contact-copy p{
+    margin-top:7px;
+    font-size:12px;
+    line-height:1.9;
+  }
+  .eyebrow{
+    font-size:10px;
+    padding:6px 9px;
+  }
+  .project-grid,
+  .services-grid,
+  .process-grid{
+    gap:14px;
+  }
+  .project-card{
+    padding:17px;
+    gap:15px;
+  }
+  .logo-stage{
+    height:96px;
+    padding:14px;
+  }
+  .project-card h3{
+    margin-top:7px;
+    font-size:18px;
+  }
+  .project-type{
+    font-size:8px;
+  }
+  .project-points{
+    gap:6px;
+  }
+  .project-points li{
+    font-size:10.5px;
+    line-height:1.75;
+  }
+  .service-card{
+    padding:17px;
+  }
+  .service-card h3{
+    margin-top:14px;
+    font-size:17px;
+  }
+  .service-card p{
+    font-size:11px;
+    line-height:1.85;
+  }
+  .service-demo{
+    height:124px;
+  }
+  .process-card{
+    padding:15px;
+  }
+  .process-card h3{
+    font-size:16px;
+  }
+  .process-card p{
+    font-size:10.5px;
+    line-height:1.8;
+  }
+  .about-grid{
+    gap:34px;
+  }
+  .profile-frame{
+    width:min(82vw,330px);
+  }
+  .contact-section{
+    padding:56px 0;
+  }
+  .contact-card{
+    gap:24px;
+    padding:22px 16px;
+  }
+  .contact-link{
+    font-size:10px;
+  }
+  .footer-main{
+    gap:18px;
+  }
+}
+
+@media(max-width:390px){
+  .hero-copy h1{
+    font-size:22px;
+  }
+  .section-head h2,
+  .about-copy h2,
+  .contact-copy h2{
+    font-size:20px;
+  }
+}
